@@ -1,5 +1,8 @@
 import React from 'react'
 import {BsCart3,BsGrid1X2Fill,BsFillArchiveFill,BsGrid3X2GapFill,BsPeopleFill,BsListCheck,BsMenuButtonWideFill,BsFillGearFill} from 'react-icons/bs'
+
+import { Link } from 'react-router-dom'
+
 function Sidebar({opneSidebarToggle,OpenSideBar}) {
   return (
     <aside id='sidebar' className={opneSidebarToggle ? "sidebar-responsive":""}>
@@ -11,29 +14,29 @@ function Sidebar({opneSidebarToggle,OpenSideBar}) {
         </div>
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsCart3 className='icon'/>Dashboard
-                </a>
+                <Link to="/" onClick={OpenSideBar}>
+                    <BsCart3 className='icon'/><span>Dashboard</span>
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsGrid1X2Fill className='icon'/>Dashboard
-                </a>
+                <Link to="/academic" onClick={OpenSideBar}>
+                    <BsGrid1X2Fill className='icon'/><span>Academic</span>
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsFillArchiveFill className='icon'/>Dashboard
-                </a>
+            <Link to="/projects" onClick={OpenSideBar}>
+                    <BsFillArchiveFill className='icon'/><span>Projects</span>
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsGrid3X2GapFill className='icon'/>Dashboard
-                </a>
+            <Link to="/skills" onClick={OpenSideBar}>
+                    <BsGrid3X2GapFill className='icon'/><span>Skills Experience</span>
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href=''>
-                    <BsPeopleFill className='icon'/>Dashboard
-                </a>
+            <Link to="/learningTeck" onClick={OpenSideBar}>
+                    <BsPeopleFill className='icon'/><span>Learning Tech</span>
+                </Link>
             </li>
         </ul>
     </aside>

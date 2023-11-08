@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import Home from './components/Home'
+import Home from './pages/Home'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
   }
 
   return (
-    <>
+    <Router>
       <div className='grid-container'>
         <Header OpenSideBar={OpenSideBar}/>
         <Sidebar opneSidebarToggle={opneSidebarToggle} OpenSideBar={OpenSideBar}/>
@@ -22,7 +23,7 @@ function App() {
 
       </div>
 
-    </>
+    </Router>
   )
 }
 

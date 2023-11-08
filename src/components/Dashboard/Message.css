@@ -1,0 +1,22 @@
+.message_container{
+    padding: 10px;
+    margin: auto 100px;
+    background-color: rgb(228, 189, 162);
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+.text-message{
+    height: 50px;
+    width: 400px;
+    padding: 10px;
+   
+}
+.textField{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 12px;
+   
+  
+}
